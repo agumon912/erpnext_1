@@ -1,0 +1,19 @@
+[93mWARN: bench is installed in editable mode!
+
+This is not the recommended mode of installation for production. Instead, install the package from PyPI with: `pip install frappe-bench`
+[0m
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 11, in <module>
+    load_entry_point('frappe-bench', 'console_scripts', 'bench')()
+  File "/home/joanitojeff/erpnext/bench-repo/bench/cli.py", line 49, in cli
+    if sys.argv[1] in get_frappe_commands() + ["--site", "--verbose", "--force", "--profile"]:
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'list'
+Backup Summary at 2020-09-16 12:00:03.627191
+--------------------------------------------
+Database backup: ./testsite/private/backups/20200916_120002-testsite-database.sql.gz
+Backup Summary at 2020-09-17 12:00:03.212619
+--------------------------------------------
+Database backup: ./testsite/private/backups/20200917_120002-testsite-database.sql.gz
+Backup Summary at 2020-09-18 12:00:03.367239
+--------------------------------------------
+Database backup: ./testsite/private/backups/20200918_120002-testsite-database.sql.gz

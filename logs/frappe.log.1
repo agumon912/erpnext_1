@@ -1,0 +1,162 @@
+[ERROR] 2020-09-20 08:18:06,767 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cached_timestamp": "",
+ "cmd": "frappe.desk.form.load.getdoctype",
+ "doctype": "Quotation",
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 70, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 80, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 26, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 179, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/modules/utils.py", line 204, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 827, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 10, in <module>
+    from erpnext.controllers.selling_controller import SellingController
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/controllers/selling_controller.py", line 8, in <module>
+    from erpnext.stock.get_item_details import get_bin_details
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/get_item_details.py", line 14, in <module>
+    from erpnext.stock.doctype.item.item import get_item_defaults, get_uom_conv_factor
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/doctype/item/item.py", line 516
+    if d.uom and cstr(d.uom) == cstr(self.stock_uom) and flt(d.conversion_factor) != 1:
+     ^
+IndentationError: expected an indented block
+[ERROR] 2020-09-20 08:20:14,204 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cached_timestamp": "",
+ "cmd": "frappe.desk.form.load.getdoctype",
+ "doctype": "Quotation",
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 70, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 80, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 26, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 179, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/modules/utils.py", line 204, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 827, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 10, in <module>
+    from erpnext.controllers.selling_controller import SellingController
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/controllers/selling_controller.py", line 8, in <module>
+    from erpnext.stock.get_item_details import get_bin_details
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/get_item_details.py", line 14, in <module>
+    from erpnext.stock.doctype.item.item import get_item_defaults, get_uom_conv_factor
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/doctype/item/item.py", line 516
+    if d.uom and cstr(d.uom) == cstr(self.stock_uom) and flt(d.conversion_factor) != 1:
+     ^
+IndentationError: expected an indented block
+[ERROR] 2020-09-20 08:20:20,616 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cached_timestamp": "",
+ "cmd": "frappe.desk.form.load.getdoctype",
+ "doctype": "Quotation",
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 70, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 80, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 26, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 179, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/modules/utils.py", line 204, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 827, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 10, in <module>
+    from erpnext.controllers.selling_controller import SellingController
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/controllers/selling_controller.py", line 8, in <module>
+    from erpnext.stock.get_item_details import get_bin_details
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/get_item_details.py", line 14, in <module>
+    from erpnext.stock.doctype.item.item import get_item_defaults, get_uom_conv_factor
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/erpnext/erpnext/stock/doctype/item/item.py", line 516
+    if d.uom and cstr(d.uom) == cstr(self.stock_uom) and flt(d.conversion_factor) != 1:
+     ^
+IndentationError: expected an indented block

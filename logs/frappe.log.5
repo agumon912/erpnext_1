@@ -1,0 +1,1869 @@
+[DEBUG] 2020-09-15 12:16:06,801 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:17:06,913 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:18:07,065 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:19:07,207 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:20:07,351 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:21:07,445 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:22:07,547 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:23:07,687 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:24:07,864 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:25:08,027 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:26:08,134 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:51:19,581 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:52:19,675 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:53:19,767 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:54:19,854 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:55:19,998 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:56:20,160 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:57:20,252 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 12:58:20,342 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[ERROR] 2020-09-15 12:59:18,106 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.core.doctype.user.user.reset_password",
+ "user": "joanitojeff@joanitojeff.com"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 800, in reset_password
+    user.reset_password(send_email=True)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 232, in reset_password
+    self.password_reset_mail(link)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 251, in password_reset_mail
+    "password_reset", {"link": link}, now=True)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 296, in send_login_mail
+    delayed=(not now) if now!=None else self.flags.delay_emails, retry=3)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 488, in sendmail
+    inline_images=inline_images, header=header, print_letterhead=print_letterhead)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/email/queue.py", line 76, in send
+    email_account = get_outgoing_email_account(True, append_to=reference_doctype, sender=sender)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/email/smtp.py", line 86, in get_outgoing_email_account
+    frappe.OutgoingEmailError)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 376, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 355, in msgprint
+    _raise_exception()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.OutgoingEmailError: Please setup default Email Account from Setup > Email > Email Account
+[ERROR] 2020-09-15 12:59:18,185 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-09-15 12:59:18.106614-127.0.0.1-dc1
+[DEBUG] 2020-09-15 12:59:20,448 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:00:20,623 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:01:20,719 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:02:20,808 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:03:20,949 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:04:21,068 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:05:21,210 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:06:21,350 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:07:21,498 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:08:21,619 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:09:21,706 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:10:21,870 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:11:21,966 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:12:22,127 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:13:22,220 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:14:22,315 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:15:22,419 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:16:22,580 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:17:22,726 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:18:22,824 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:19:22,922 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:20:23,082 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:21:23,182 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:22:23,282 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:23:23,423 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:24:23,586 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:25:23,719 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:26:24,282 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:27:24,367 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:28:24,526 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:29:24,614 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:30:24,707 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:31:24,853 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:32:24,963 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:33:25,103 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:34:25,244 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:35:25,394 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:36:25,514 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:37:25,657 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:38:25,798 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:39:25,927 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:40:26,047 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:41:26,189 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:42:26,290 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:43:26,389 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:44:26,492 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:45:26,634 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:46:26,779 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:47:26,923 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:48:27,029 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:49:27,171 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:50:27,320 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:51:27,467 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:52:27,617 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:53:27,706 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:54:27,802 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:55:27,943 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:56:28,062 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:57:28,213 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:58:28,307 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 13:59:28,450 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:00:28,558 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:01:28,676 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:02:28,767 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:03:28,867 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:04:29,037 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:05:29,178 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:06:29,261 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:07:29,406 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:08:29,551 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:09:29,693 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:10:29,836 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:11:29,970 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:12:30,086 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:13:30,224 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:14:30,326 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:15:30,407 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:16:30,523 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:17:30,609 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:18:30,749 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:19:30,850 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:20:30,968 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:21:31,113 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:22:31,212 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:23:31,342 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:24:31,504 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:25:31,600 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:26:31,688 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:27:31,778 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:28:31,934 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:29:32,031 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:30:32,119 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:31:32,211 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:32:32,377 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:33:32,522 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:34:32,668 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:35:32,766 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:36:32,868 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:37:32,958 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:38:33,050 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:39:33,147 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:40:33,310 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:41:33,411 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:42:33,554 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:43:33,652 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:44:33,752 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:45:33,840 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:46:33,981 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:47:34,069 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:48:34,222 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:49:34,368 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:50:34,511 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:51:34,654 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:52:34,763 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:53:34,906 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:54:35,002 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:55:35,146 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 14:56:35,248 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:10:44,672 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:11:44,816 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:12:44,974 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:13:45,072 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:14:45,181 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:15:45,260 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:16:45,370 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:17:45,453 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:18:45,546 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:19:45,628 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:20:45,730 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:21:45,875 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:22:45,969 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:23:46,056 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:24:46,156 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:25:46,252 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:26:46,346 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:27:46,445 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:28:46,561 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:37:23,671 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:38:23,771 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:48:39,263 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:49:39,397 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:50:39,493 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:51:39,632 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:52:39,749 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:53:39,845 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:54:39,939 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:55:40,039 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:56:40,152 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:57:40,245 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:58:40,349 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 15:59:40,438 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:00:40,553 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:01:40,643 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:02:40,733 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:03:49,605 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:04:49,757 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:05:49,854 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:06:49,948 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:08:46,532 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:09:46,629 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:10:46,716 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:11:46,800 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:12:46,909 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:13:47,005 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:14:47,101 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:15:47,196 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[ERROR] 2020-09-15 16:17:06,490 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-15 16:17:07,040 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-09-15 16:17:06.514154-127.0.0.1-8fc
+[DEBUG] 2020-09-15 16:18:04,696 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:19:04,833 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:20:04,976 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:21:05,113 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:22:05,255 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:23:05,392 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:24:05,488 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:25:05,659 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:26:05,758 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:27:05,884 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:28:05,979 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:29:06,064 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:30:06,210 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:31:06,351 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:32:06,449 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:33:06,543 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:34:06,626 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:35:06,767 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:36:06,901 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:37:07,034 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:38:07,174 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:39:07,316 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:40:07,436 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:41:07,528 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:42:07,612 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:43:07,750 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:44:07,848 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:45:07,938 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:46:08,049 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:47:08,136 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:48:08,242 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:49:08,326 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:50:08,463 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:51:08,563 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:52:08,674 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:53:08,774 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:54:08,860 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:55:08,955 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:56:09,077 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-15 16:57:09,175 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:18:37,042 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[ERROR] 2020-09-16 08:18:56,095 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-16 08:18:56,095 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-16 08:18:56,095 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-16 08:18:56,095 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-16 08:18:56,304 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-09-16 08:18:56.096960-127.0.0.1-ec5
+[ERROR] 2020-09-16 08:18:56,304 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-09-16 08:18:56.096474-127.0.0.1-004
+[DEBUG] 2020-09-16 08:19:54,554 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:20:54,655 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:21:54,749 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:22:54,845 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:23:54,937 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:24:55,034 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:25:55,180 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:26:55,265 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:27:55,347 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:28:55,446 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:29:55,532 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:30:55,713 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:31:55,810 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:32:55,961 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:33:56,049 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:34:56,146 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:35:56,289 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:36:56,387 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:37:56,474 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:38:56,613 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:39:56,757 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:40:56,863 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:41:56,948 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:42:57,039 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:43:57,124 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:44:57,221 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:45:57,300 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:46:57,408 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:47:57,484 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:48:57,584 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:49:57,676 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:50:57,757 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:51:57,842 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:52:58,716 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:53:58,817 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:54:58,903 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:55:59,040 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:56:59,150 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:57:59,224 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:58:59,367 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 08:59:59,466 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:00:59,610 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:01:59,697 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:02:59,781 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:03:59,872 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:05:00,011 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:06:00,103 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:07:00,217 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:08:00,326 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:09:00,409 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:10:00,508 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:11:00,585 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:12:00,686 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:13:00,830 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:14:00,932 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:15:01,026 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:16:01,126 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:17:01,211 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:18:01,308 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:19:01,453 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:20:01,574 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:21:01,714 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:22:01,809 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:23:01,912 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:24:02,073 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:25:02,170 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:26:02,314 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:27:02,400 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:28:02,563 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:29:02,706 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:30:02,830 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:31:02,910 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:32:03,009 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:33:03,098 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:34:03,181 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:35:03,268 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:36:03,372 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:37:03,460 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:38:03,533 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:39:03,624 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:40:03,733 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:41:03,834 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:42:03,933 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:43:04,034 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:44:04,137 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:45:04,234 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:46:04,339 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:47:04,436 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:48:04,543 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:49:04,643 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:50:04,736 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:51:04,831 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:52:04,938 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:53:05,026 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:54:05,128 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:55:05,228 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:56:05,336 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:57:05,435 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:58:05,540 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 09:59:05,638 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:00:05,766 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:01:05,859 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:02:05,953 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:03:06,048 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:04:06,159 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:05:06,253 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:06:06,404 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:07:06,502 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:08:06,610 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:09:06,751 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:10:06,892 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:11:07,036 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:12:07,200 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:13:07,349 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:14:07,490 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:15:07,584 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:16:07,747 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:17:07,888 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:18:07,982 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:19:08,128 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:20:08,290 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:21:08,391 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:22:08,531 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:23:08,661 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:24:08,819 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:25:08,905 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:26:08,989 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:27:09,073 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:28:09,169 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:29:09,255 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:30:09,344 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:31:09,439 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:32:09,561 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:33:09,654 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:34:09,747 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:35:09,842 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:36:09,938 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:37:10,029 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:38:10,107 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:39:10,202 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:40:10,301 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:41:10,431 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:42:10,537 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:43:10,675 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:44:10,770 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:45:10,853 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:46:10,923 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:47:11,020 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:48:11,112 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:49:11,205 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:50:11,284 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:51:11,378 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:52:11,490 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:53:11,579 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:54:11,674 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:55:11,770 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:56:11,882 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:57:11,971 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:58:12,054 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 10:59:12,126 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:00:12,233 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:01:12,373 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:02:12,466 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:03:12,560 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:04:12,688 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:05:12,825 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:06:12,918 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:07:13,015 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:08:13,182 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:09:13,269 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:10:13,386 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:11:13,480 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:12:13,579 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:13:13,668 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:14:13,751 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:15:13,836 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:16:13,929 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:17:14,020 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:18:14,095 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:19:14,192 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:20:14,286 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:21:14,386 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:22:14,480 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:23:14,582 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:24:14,695 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:25:14,781 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:26:14,871 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:27:14,967 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:28:15,080 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:29:15,166 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:30:15,256 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:31:15,349 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:32:15,456 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:33:15,549 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:34:15,646 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:35:15,745 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:36:15,862 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:37:15,951 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:38:16,045 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:39:16,143 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:40:16,254 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:41:16,352 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:42:16,453 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:43:16,557 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:44:16,709 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:45:16,847 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:46:16,944 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:47:17,044 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:48:17,200 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:49:17,342 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:50:17,485 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:51:17,580 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:52:17,684 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:53:17,823 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:54:17,925 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:55:18,070 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:56:18,234 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:57:18,325 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:58:18,422 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 11:59:18,558 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:00:18,721 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:01:18,822 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:02:18,922 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:03:19,010 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:04:19,110 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:05:19,197 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:06:19,283 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:07:19,369 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:08:19,466 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:09:19,565 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:10:19,657 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:11:19,762 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:12:19,877 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:13:19,971 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:14:20,057 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:15:20,194 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:16:20,302 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:17:20,407 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:18:20,506 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:19:20,641 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:20:20,743 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:21:20,845 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:22:20,949 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:23:21,049 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:24:21,165 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:25:21,258 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:26:21,346 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:27:21,442 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:28:21,541 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:29:21,634 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:30:21,732 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:31:21,814 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:32:21,971 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:33:22,069 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:34:22,161 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:35:22,254 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:36:22,352 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:37:22,442 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:38:22,538 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:39:22,630 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:40:22,746 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:41:22,845 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:42:23,016 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:43:23,106 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:44:23,218 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:45:23,301 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:46:23,400 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:47:23,497 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:48:23,612 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:49:23,702 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:50:23,803 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:51:23,947 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:52:24,061 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:53:24,204 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:54:24,330 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:55:24,415 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:56:24,516 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:57:24,606 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:58:24,686 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 12:59:24,777 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:00:24,886 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:01:24,972 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:02:25,058 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:03:25,159 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:04:25,289 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:05:25,376 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:06:25,463 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:07:25,557 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:08:25,670 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:09:25,759 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:10:25,863 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:11:25,958 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:12:26,056 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:13:26,150 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:14:26,229 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:15:26,320 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:16:26,426 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:17:26,518 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:18:26,609 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:19:26,733 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:20:26,849 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:21:26,947 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:22:27,030 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:23:27,132 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:24:27,236 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:25:27,324 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:26:27,417 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:27:27,514 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:28:27,628 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:29:27,724 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:30:27,820 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:31:27,940 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:32:28,029 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:33:28,109 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:34:28,247 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:35:28,386 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:36:28,483 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:37:28,576 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:38:28,677 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:39:28,803 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:40:28,927 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:41:29,021 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:42:29,114 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:43:29,240 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:44:29,352 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:45:29,461 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:46:29,597 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:47:29,702 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:48:29,795 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:49:29,884 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:50:29,969 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:51:30,054 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:52:30,242 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:53:30,322 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:54:30,424 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:55:30,535 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:56:30,674 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:57:30,752 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:58:30,838 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 13:59:30,922 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[ERROR] 2020-09-16 14:00:23,400 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py:
+Site: testsite
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/handler.py", line 63, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/__init__.py", line 1055, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-09-16 14:00:23,551 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-09-16 14:00:23.401657-127.0.0.1-f5f
+[DEBUG] 2020-09-16 14:01:22,252 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
+[DEBUG] 2020-09-16 14:02:22,339 | /home/joanitojeff/erpnext/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: testsite
+Queued events for site testsite
